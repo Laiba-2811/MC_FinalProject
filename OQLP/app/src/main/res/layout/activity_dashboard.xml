@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Dashboard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500"
+        tools:layout_editor_absoluteX="-77dp"
+        tools:layout_editor_absoluteY="38dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_dehaze_24"
+            app:title="Dashboard"
+            app:titleTextColor="@color/purple_500" />
+
+        <Button
+            android:id="@+id/norani"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Norani Qaida"
+            android:padding="2dp"
+            android:textColor="#fff"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/Duas"
+            app:layout_constraintEnd_toStartOf="@+id/Qalmas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <Button
+            android:id="@+id/Qalmas"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="2dp"
+            android:text="Qalmas"
+            android:textColor="#fff"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/Namaz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/norani"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <Button
+            android:id="@+id/Duas"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Duas"
+            android:padding="2dp"
+            android:textColor="#fff"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/surah"
+            app:layout_constraintStart_toStartOf="@id/norani"
+            app:layout_constraintTop_toBottomOf="@+id/norani" />
+
+        <Button
+            android:id="@+id/Namaz"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Namaz"
+            android:padding="2dp"
+            android:textColor="#fff"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/Fiqah"
+            app:layout_constraintStart_toStartOf="@id/Qalmas"
+            app:layout_constraintTop_toBottomOf="@+id/Qalmas" />
+
+        <Button
+            android:id="@+id/surah"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Last 20 Surahs"
+            android:textColor="#fff"
+            android:padding="2dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/Stories"
+            app:layout_constraintStart_toStartOf="@id/Duas"
+            app:layout_constraintTop_toBottomOf="@+id/Duas" />
+
+        <Button
+            android:id="@+id/Fiqah"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Fiqah"
+            android:textColor="#fff"
+            android:padding="2dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toTopOf="@+id/Stories"
+            app:layout_constraintStart_toStartOf="@id/Namaz"
+            app:layout_constraintTop_toBottomOf="@+id/Namaz" />
+
+        <Button
+            android:id="@+id/Stories"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Moral Stories"
+            android:textColor="#fff"
+            android:padding="2dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/surah" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

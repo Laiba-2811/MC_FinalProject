@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="left"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_dehaze_24" />
+
+        <TextView
+            android:id="@+id/arabicTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arabicboldfont"
+            android:padding="22dp"
+            android:text="وَلَقَدْيَسَّرْنَاٱلْقُرْءَان َلِلذِّكْرِفَهَل مِن مُّدَّكِرٍ"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/EnglishTopText"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/EnglishTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="And We have certainly made the Qur'an easy for remembrance, so is there any who will remember?"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/image"
+            app:layout_constraintEnd_toEndOf="@id/arabicTopText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/arabicTopText"
+            app:layout_constraintTop_toBottomOf="@+id/arabicTopText" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:onClick="Dashboard"
+            android:src="@drawable/logoimg3"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@id/EnglishTopText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/EnglishTopText"
+            app:layout_constraintTop_toBottomOf="@+id/EnglishTopText" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Dashboard"
+            android:text="click here continue ->"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            tools:ignore="RtlCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

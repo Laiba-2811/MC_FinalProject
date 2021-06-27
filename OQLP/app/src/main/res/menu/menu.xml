@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:id="@+id/nav_qaeda"
+            android:title="Norani Qaeda"
+            android:icon="@drawable/ic_baseline_menu_book_24"/>
+        <item
+            android:id="@+id/nav_creeds"
+            android:title="Creeds"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"/>
+        <item
+            android:id="@+id/nav_prayer"
+            android:title="Prayer"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"/>
+        <item
+            android:id="@+id/nav_duas"
+            android:title="Duas"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"/>
+        <item
+            android:id="@+id/nav_surahs"
+            android:title="Surahs"
+            android:icon="@drawable/ic_baseline_menu_book_24"/>
+        <item
+            android:id="@+id/nav_stories"
+            android:title="Moral Stories"
+            android:icon="@drawable/ic_baseline_menu_book_24"/>
+        <item
+            android:id="@+id/nav_fiqah"
+            android:title="Fiqah"
+            android:icon="@drawable/ic_baseline_library_books_24"/>
+        <item android:title="">
+            <group>
+                <menu>
+                    <item
+                        android:id="@+id/nav_share"
+                        android:title="Share"
+                        android:icon="@drawable/ic_baseline_share_24"/>
+                </menu>
+            </group>
+        </item>
+    </group>
+
+</menu>
